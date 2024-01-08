@@ -6,7 +6,7 @@ export class GoogleChatService {
   private gJwt: JWT;
   private chat: chat_v1.Chat;
 
-  constructor(gServiceAccountKey: string, gServiceAccountEmail: string) {
+  constructor(gServiceAccountEmail: string, gServiceAccountKey: string) {
     this.chat = google.chat('v1');
     this.gJwt = new JWT({
       email: gServiceAccountEmail,
