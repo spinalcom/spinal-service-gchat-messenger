@@ -4,7 +4,7 @@ exports.GoogleChatService = void 0;
 const googleapis_1 = require("googleapis");
 const google_auth_library_1 = require("google-auth-library");
 class GoogleChatService {
-    constructor(gServiceAccountKey, gServiceAccountEmail) {
+    constructor(gServiceAccountEmail, gServiceAccountKey) {
         this.chat = googleapis_1.google.chat('v1');
         this.gJwt = new google_auth_library_1.JWT({
             email: gServiceAccountEmail,
